@@ -132,7 +132,6 @@ const styles = StyleSheet.create({
     height: 80,
     resizeMode: 'contain',
     flex: 1,
-    resizeMode: 'contain',
     shadowColor: "#000",
     shadowOffset: {
       width: 0,
@@ -140,6 +139,5 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 0.53,
     shadowRadius: 13.97,
-    elevation: 21,
   },
 });

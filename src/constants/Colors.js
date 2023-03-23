@@ -1,4 +1,5 @@
-export default {
-    primary: '#323232',
-    backGround: '#FFCF09'
+export const COLORS = {
+    primary: '#FFCF09',
+    text: '#323232',
+    black: '#000',
 }
