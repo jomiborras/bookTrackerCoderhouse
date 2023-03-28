@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
 
-const BookDetailScreen = ({ route, navigation }) => {
+import { useSelector } from 'react-redux';
 
-  const { book } = route.params;
+const BookDetailScreen = ({ navigation }) => {
 
+  const book = useSelector(state => state.books.selected);
 
   useEffect(() => {
     navigation.setOptions({

@@ -1,24 +1,21 @@
-import { StyleSheet, Text, TouchableOpacity, View, Image } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import React from 'react';
 
-const GridItem = ({
+const CategoryItem = ({
     item,
     onSelect
 }) => {
 
     return (
         <View style={styles.gridItem}>
-            <TouchableOpacity onPress={() => onSelect(item)} style={[styles.container, { backgroundImage: item.image }]}>
-                <View style={styles.imageContainer}>
-                    <Image source={item.image} style={styles.image} />
-                </View>
-                <Text style={styles.title}>{item.name}</Text>
+            <TouchableOpacity onPress={() => onSelect(item)} style={[styles.container, {backgroundColor: item.color}]}>
+                <Text style={styles.title}>{item.title}</Text>
             </TouchableOpacity>
         </View>
     )
 };
 
-export default GridItem;
+export default CategoryItem;
 
 const styles = StyleSheet.create({
     gridItem: {
@@ -32,7 +29,8 @@ const styles = StyleSheet.create({
         borderRadius: 6,
         padding: 8,
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        borderWidth: 1,
     },
     title: {
         fontSize: 10,
@@ -58,4 +56,4 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.53,
         shadowRadius: 13.97,
     }
-});
+})
